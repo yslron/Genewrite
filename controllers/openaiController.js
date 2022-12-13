@@ -1,8 +1,9 @@
 const { Configuration, OpenAIApi } = require('openai');
 
+const key = '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'
 // Create a new Configuration object with the API key
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: key
 });
 
 // Create a new OpenAIApi object using the Configuration object
@@ -15,7 +16,6 @@ const generateImage = async (req, res) => {
   const { prompt} = req.body;
 
   // Set the image size based on the size parameter
-  
 
   try {
     // Use the OpenAI API to generate an image with the given prompt and size
