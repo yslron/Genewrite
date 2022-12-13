@@ -3,6 +3,9 @@ html *
   font-family: 'Inter', sans-serif !important;
 
 }
+html{
+  scroll-behavior: smooth;
+}
 .form-control{
   width: 100%;
 }
@@ -567,3 +570,4 @@ background-clip: text;
   align-self: center;
   text-align: end;
 }
+
