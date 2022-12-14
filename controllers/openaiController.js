@@ -1,6 +1,5 @@
 const { Configuration, OpenAIApi } = require('openai');
 
- 
 // Create a new Configuration object with the API key
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -39,13 +38,13 @@ const generateImage = async (req, res) => {
       console.log(error.response.status);
       console.log(error.response.data);
     } else {
-      console.log(error.message);
+      console.log(error.message );
     }
 
     // Return an error response
-    res.status(400).json({
+    res.status(300).json({
       success: false,
-      error: 'The image could not be generated',
+      error: 300,
     });
   }
 };
